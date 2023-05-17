@@ -1,0 +1,378 @@
+:root {
+    --green: #8DC641;
+    --inactive-tab: rgba(144, 144, 144, 0.1);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    padding-top: 10px;
+}
+
+.transport {
+    padding: 20px 0 30px;
+    min-height: 100vh;
+}
+
+.transport__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.transport__header .filler {
+    width: 24px;
+    padding: 0 15px;
+}
+
+.transport__go-back svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--green);
+}
+
+.transport__title {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.transport__body {
+    padding-top: 8px;
+    border-top: 1px solid rgba(60,60,60,.1);
+}
+
+.transport__tabs {
+    padding: 0 10px;
+    display: flex;
+}
+
+.transport__tab {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 100%;
+    color: rgb(144, 144, 144);
+    background-color: #f5f5f5;
+}
+
+.transport__tab.active {
+    color: #fff;
+    background-color: var(--green);
+    z-index: 3;
+}
+
+.transport__tab-travel-card {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.transport__tab-travel-card:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -15px;
+    width: 15px;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+.transport__tickets {
+    padding: 8px 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.transport__ticket {
+    width: 100%;
+    padding: 1px;
+    border: 1px solid rgba(60, 60, 60, 0.2);
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: -4px 4px 10px rgba(60, 60, 60, .15), 4px 4px 10px rgba(60, 60, 60, .15);
+}
+
+.transport__establishment {
+    display: flex;
+    gap: 10px;
+}
+
+.transport__placename {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 12px;
+    color: rgba(60,60,60,.4);
+}
+
+.transport__herb {
+    border: 1px solid var(--inactive-tab);
+    border-radius: 5px;
+}
+
+.transport__herb img {
+    width: 40px;
+}
+
+.transport__series span {
+    color: rgba(60, 60, 60, 0.6);
+    font-weight: bold;
+    letter-spacing: 0.02em;
+}
+
+.active .transport__series span,
+.active .transport__ticket-value {
+    color: #000;
+}
+
+.transport__ticket-top {
+    display: flex;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+.transport__ticket-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    font-size: 14px;
+    padding: 5px 0;
+    color: rgba(60,60,60,.4);
+}
+
+.active .transport__ticket-info {
+    color: rgba(60,60,60,.7);
+}
+
+.active .lighter {
+    color: rgba(60,60,60,.5);
+}
+
+.lighter {
+  color: rgba(60,60,60,.4);
+}
+
+.transport__ticket-info div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inactive-pic {
+    width: 110px;
+    border-radius: 8px;
+}
+
+.transport__ticket-value {
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(60,60,60,.6);
+}
+
+.transport__active-info {
+    margin-top: 12px;
+}
+
+.transport__label {
+    margin-bottom: 15px;
+}
+
+.transport__label,
+.transport__timing {
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--green);
+}
+
+.transport__timing {
+    font-size: 24px;
+}
+
+.active-pic {
+    width: 110px;
+    height: 128px;
+    border-radius: 8px;
+    background-color: #5756D5;
+    padding: 15px;
+}
+
+.trams {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3px;
+}
+
+.tram {
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+}
+
+.tram:nth-child(1) {
+    animation: tram-fade 3.4s infinite;
+}
+
+.tram:nth-child(2) {
+    animation: tram-fade 12.8s infinite;
+    animation-delay: 2s;
+}
+
+.tram:nth-child(3) {
+    animation: tram-fade 6.2s infinite;
+    animation-delay: 4s;
+}
+
+.tram:nth-child(4) {
+    animation: tram-fade 5.6s infinite;
+    animation-delay: 6s;
+}
+
+.tram:nth-child(5) {
+    animation: tram-fade 4.6s infinite;
+    animation-delay: 8s;
+}
+
+.tram:nth-child(6) {
+    animation: tram-fade 9s infinite;
+    animation-delay: 20s;
+}
+
+.tram:nth-child(7) {
+    animation: tram-fade 3.6s infinite;
+    animation-delay: 12s;
+}
+
+.tram:nth-child(8) {
+    animation: tram-fade 5s infinite;
+    animation-delay: 6s;
+}
+
+.tram:nth-child(9) {
+    animation: tram-fade 4s infinite;
+    animation-delay: 5s;
+}
+
+.tram:nth-child(10) {
+    animation: tram-fade 7s infinite;
+    animation-delay: 5s;
+}
+
+.tram:nth-child(11) {
+    animation: tram-fade 8s infinite;
+    animation-delay: 20s;
+}
+
+.tram:nth-child(12) {
+    animation: tram-fade 3s infinite;
+    animation-delay: 8s;
+}
+
+.tram:nth-child(13) {
+    animation: tram-fade 2s infinite;
+    animation-delay: 10s;
+}
+
+.tram:nth-child(14) {
+    animation: tram-fade 5s infinite;
+    animation-delay: 14s;
+}
+
+.tram:nth-child(15) {
+    animation: tram-fade 3s infinite;
+    animation-delay: 12s;
+}
+
+@keyframes tram-fade {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    30% {
+        opacity: 0.75;
+    }
+
+    40% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.3;
+    }
+
+    70% {
+        opacity: 0.8;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.tram svg {
+    width: 100%;
+    height: 100%;
+}
+
+.tram svg path:nth-child(2) {
+    fill: #fff;
+}
+
+.tram-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    margin-top: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.tram-label {
+    font-size: 12px;
+}
+
+.tram-number {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.scan-qr {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15px 20px 45px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.scan-btn {
+    width: 100%;
+    background-color: var(--green);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 12px;
+    border: none;
+    appearance: none;
+    padding: 13px;
+}
